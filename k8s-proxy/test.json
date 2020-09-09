@@ -1,0 +1,66 @@
+[{
+  "ip": "172.18.0.6",
+  "name": "nginx-k8s",
+  "state": {
+    "running": {
+      "startedAt": "2020-09-09T06:07:36Z"
+    }
+  },
+  "ready": true,
+  "image": "abaiju15/alpine-nginx:1.0.0"
+},
+{
+  "ip": "172.18.0.7",
+  "name": "nginx-k8s",
+  "state": {
+    "running": {
+      "startedAt": "2020-09-09T06:07:36Z"
+    }
+  },
+  "ready": true,
+  "image": "abaiju15/alpine-nginx:1.0.0"
+},
+{
+  "ip": "172.18.0.3",
+  "name": "nginx-k8s",
+  "state": {
+    "running": {
+      "startedAt": "2020-09-09T06:07:30Z"
+    }
+  },
+  "ready": true,
+  "image": "abaiju15/alpine-nginx:1.0.0"
+},
+{
+  "ip": "172.18.0.8",
+  "name": "nginx-k8s",
+  "state": {
+    "running": {
+      "startedAt": "2020-09-09T06:07:37Z"
+    }
+  },
+  "ready": true,
+  "image": "abaiju15/alpine-nginx:1.0.0"
+},
+{
+  "ip": "172.18.0.5",
+  "name": "nginx-k8s",
+  "state": {
+    "running": {
+      "startedAt": "2020-09-09T06:07:35Z"
+    }
+  },
+  "ready": true,
+  "image": "abaiju15/alpine-nginx:1.0.0"
+},
+{
+  "ip": "172.18.0.4",
+  "name": "nginx-k8s",
+  "state": {
+    "running": {
+      "startedAt": "2020-09-09T06:07:35Z"
+    }
+  },
+  "ready": true,
+  "image": "abaiju15/alpine-nginx:1.0.0"
+}]

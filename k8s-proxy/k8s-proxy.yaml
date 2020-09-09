@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k8s-api-proxy
+spec:
+  volumes:
+    - name: task-pv-storage
+      persistentVolumeClaim:
+        claimName: task-pv-claim
+  containers:
+  - name: k8s-proxy
+    image: abaiju15/k8s-api-proxy:1.0.2
+    command: ["/startup.sh"]
+    ports:
+        - containerPort: 8081
+    volumeMounts:
+      - name: task-pv-storage
+        mountPath: /html
+    env:
+      - name: APP_NAME
+        value: "nginx-k8s"
+            
