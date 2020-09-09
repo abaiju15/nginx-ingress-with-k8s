@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-k8s
+  name: nginx-k8s
+spec:
+  selector:
+    matchLabels:
+      app: nginx-k8s
+  replicas: 6
+  template:
+    metadata:
+      labels:
+        app: nginx-k8s
+      name: nginx-k8s
+    spec:
+      volumes:
+        - name: task-pv-storage
+          persistentVolumeClaim:
+            claimName: task-pv-claim
+      containers:
+        - name: nginx-k8s
+          image: abaiju15/alpine-nginx:1.0.0
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 100m
+              memory: 10Mi
+            requests:
+              cpu: 100m
+              memory: 10Mi
+          volumeMounts:
+            - name: task-pv-storage
+              mountPath: /etc/nginx/html
+
